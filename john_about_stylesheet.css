@@ -178,4 +178,25 @@ a:hover {
         margin-left: 0;
         margin-top: 20px;
     }
+
+    article {
+        margin-bottom: 40px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    .post-date {
+        color: #808080;
+        font-style: italic;
+        margin-bottom: 20px;
+    }
 }

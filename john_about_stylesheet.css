@@ -135,6 +135,16 @@ li {
     margin-bottom: 15px;
 }
 
+/* Bulleted lists (home page fun facts, about page interests) */
+ul.bulleted {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+ul.bulleted li {
+    margin-bottom: 10px;
+}
+
 /* Optional: If you want no bullets and no indentation at all, remove position: relative and padding */
 li:before {
     content: "";

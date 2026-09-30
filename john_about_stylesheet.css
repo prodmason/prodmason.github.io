@@ -61,12 +61,21 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 30px 0;
+    padding: 16px 0;
 }
 
 .content {
     flex: 2;
     padding-right: 30px;
+}
+
+/* Keep the gaps under the header line and above the footer line tight */
+.content > p:first-child {
+    margin-top: 0;
+}
+
+.content > p:last-child {
+    margin-bottom: 0;
 }
 
 .profile-image {

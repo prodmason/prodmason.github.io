@@ -1,0 +1,4 @@
+# The about page is hidden from the published site.
+# Delete "about" from this list to bring it back.
+exclude:
+  - about

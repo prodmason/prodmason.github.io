@@ -1,2 +1,2 @@
-:HL["/isoamtcalc/_next/static/css/4a298b7cc4372bad.css","style"]
-0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"1vlXUOUKlH_NVfzSv-n4k"}
+:HL["/isoamtcalc/_next/static/css/632bfd336fdacecd.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"trPuK3wpXonx-HUPYLhBS"}

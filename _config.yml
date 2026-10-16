@@ -2,3 +2,9 @@
 # Delete "about" from this list to bring it back.
 exclude:
   - about
+
+# Jekyll skips folders starting with "_"; the ISO AMT calculator (isoamtcalc/, a Next.js static
+# export) keeps its scripts and styles in _next/.
+include:
+  - _next
+  - _not-found

@@ -1,0 +1,58 @@
+# Builds prodmason/iso-options-calc as a static site and commits it to isoamtcalc/, which GitHub
+# Pages serves at prodmason.com/isoamtcalc. Re-run it after changing the calculator:
+# Actions -> "Update ISO AMT calculator" -> Run workflow.
+name: Update ISO AMT calculator
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/checkout@v7
+        with:
+          repository: prodmason/iso-options-calc
+          path: calc-src
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: calc-src/.nvmrc
+
+      # The calculator's own next.config.ts is for its Vercel deploy; swap in a static export
+      # under the /isoamtcalc base path for this build only.
+      - name: Build static export
+        working-directory: calc-src
+        run: |
+          npm ci --no-audit --no-fund
+          cat > next.config.ts <<'CONFIG'
+          import type { NextConfig } from "next";
+
+          const nextConfig: NextConfig = { output: "export", basePath: "/isoamtcalc", trailingSlash: true };
+
+          export default nextConfig;
+          CONFIG
+          npm run build
+
+      - name: Commit to isoamtcalc/
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          rm -rf isoamtcalc
+          cp -R calc-src/out isoamtcalc
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add isoamtcalc
+          if git diff --cached --quiet; then
+            echo "Calculator unchanged; nothing to deploy."
+            exit 0
+          fi
+          git commit -m "Update ISO AMT calculator from iso-options-calc@$(git -C calc-src rev-parse --short HEAD)"
+          git push
+          gh api -X POST "repos/${{ github.repository }}/pages/builds" > /dev/null

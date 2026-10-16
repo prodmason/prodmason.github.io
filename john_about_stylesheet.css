@@ -253,20 +253,20 @@ body.about-page li:before {
     /* Remove bullets on the about page too */
 }
 
-/* Projects page: a grid of cards, each with a browser-framed preview */
+/* Projects page: a row of cards, each with a browser-framed preview */
 nav a[aria-current="page"] {
     color: #000000;
 }
 
 body.projects-page main {
     display: block;
-    padding: 32px 0 40px;
+    padding: 28px 0 32px;
 }
 
 .projects {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 40px 32px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px 24px;
 }
 
 a.project {
@@ -287,24 +287,24 @@ a.project {
 .chrome {
     display: flex;
     align-items: center;
-    gap: 6px;
-    height: 28px;
-    padding: 0 12px;
+    gap: 5px;
+    height: 22px;
+    padding: 0 10px;
     background: #f5f5f7;
     border-bottom: 1px solid #e0e0e0;
 }
 
 .chrome span {
-    width: 9px;
-    height: 9px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #d4d4d8;
 }
 
 .chrome em {
     margin: 0 auto;
-    padding-right: 39px; /* offsets the dots so the URL sits centered */
-    font: 11px/1 Helvetica, Arial, sans-serif;
+    padding-right: 36px; /* offsets the dots so the URL sits centered */
+    font: 10px/1 Helvetica, Arial, sans-serif;
     font-style: normal;
     color: #8a8a8e;
 }
@@ -329,8 +329,8 @@ a.project:hover .preview img {
 }
 
 a.project h2 {
-    margin: 18px 0 6px;
-    font: 20px Helvetica, Arial, sans-serif;
+    margin: 14px 0 4px;
+    font: 18px Helvetica, Arial, sans-serif;
     color: #000000;
 }
 
@@ -347,10 +347,18 @@ a.project:hover .arrow {
 
 a.project p {
     margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
     color: #555555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .projects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
     .projects {
         grid-template-columns: 1fr;
     }

@@ -3,8 +3,12 @@
 exclude:
   - about
 
-# Jekyll skips folders starting with "_"; the ISO AMT calculator (isoamtcalc/, a Next.js static
-# export) keeps its scripts and styles in _next/.
+# Jekyll skips files and folders starting with "_" (matched by name, at any depth); the ISO AMT
+# calculator (isoamtcalc/, a Next.js static export) needs these.
 include:
   - _next
   - _not-found
+  - _global-error
+  - _buildManifest.js
+  - _ssgManifest.js
+  - __next.*

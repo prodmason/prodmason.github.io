@@ -51,6 +51,7 @@ nav ul {
 
 nav ul li {
     margin-left: 20px;
+    margin-bottom: 0; /* keeps the links vertically centered on the name */
 }
 
 nav ul li:first-child {
@@ -254,10 +255,6 @@ body.about-page li:before {
 }
 
 /* Projects page: a row of cards, each with a browser-framed preview */
-nav a[aria-current="page"] {
-    color: #000000;
-}
-
 body.projects-page main {
     display: block;
     padding: 28px 0 32px;

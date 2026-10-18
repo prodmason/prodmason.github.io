@@ -1,6 +1,6 @@
 1:"$Sreact.fragment"
-2:I[9495,["974","static/chunks/app/page-35369da929945482.js"],"default"]
+2:I[9495,["974","static/chunks/app/page-d0d7106b15f6e5eb.js"],"default"]
 3:I[484,[],"OutletBoundary"]
 4:"$Sreact.suspense"
-0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-white p-4","children":["$","$L2",null,{}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"trPuK3wpXonx-HUPYLhBS"}
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"min-h-screen bg-white p-4","children":["$","$L2",null,{}]}],null,["$","$L3",null,{"children":["$","$4",null,{"name":"Next.MetadataOutlet","children":"$@5"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"3yKeLVbrHLQqDlMVPDMN9"}
 5:null
